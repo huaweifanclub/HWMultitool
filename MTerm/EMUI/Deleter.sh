@@ -127,10 +127,10 @@ do
 		adb shell pm uninstall -k --user 0 com.android.printspooler
 		adb shell pm uninstall -k --user 0 com.android.apps.tag
 	;;
-	"Launcher and MediaCenter (HUAWEI Only, installing retro music and lawnchair)")
+	"Launcher and MediaCenter (HUAWEI Only, installing retro music and trebuchet)")
 		adb shell pm disable-user --user 0 com.android.mediacenter
 		adb shell pm disable-user --user 0 com.huawei.android.launcher
-		adb install Apps/Lawnchair.apk
+		adb install Apps/Trebuchet.apk
 		adb install Apps/Retro.apk
 	;;
 	"Exit")
