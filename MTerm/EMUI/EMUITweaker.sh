@@ -3,7 +3,7 @@
 clear
 echo "Welcome to EMUI Tweaker!"
 PS3='Please enter your choice: '
-options=("Virtual Keys Button" "Min Navigaton Bar" "Show Network Speed Enabler" "HW Network Mode GStyle" "HW Hide Font Style" "App Name Two Lines" "Theme No Online" "HW Launcher Hide Apps" "HW Networking Mode Preference" "HW add 4G only" "HW Support Theme HWID" "Show Network Type" "UserRotation" "Exit")
+options=("Virtual Keys Button" "Min Navigaton Bar" "Show Network Speed Enabler" "HW Network Mode GStyle" "HW Hide Font Style" "App Name Two Lines" "Theme No Online" "HW Launcher Hide Apps" "HW Networking Mode Preference" "HW add 4G only" "HW Support Theme HWID" "Show Network Type" "UserRotation" "Show corners when One-Hand Mode Enabled" "Exit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -45,6 +45,9 @@ do
 	;;
 	"UserRotation")
 	bash EMUI/Tweaker/URS.sh
+	;;
+	"Show corners when One-Hand Mode Enabled")
+	bash EMUI/Tweaker/SRCWOHME.sh
 	;;
 	"Exit")
 	break
