@@ -1,6 +1,10 @@
 echo "Starting extracting files..."
 cp -r MTerm ~/
 mv ~/MTerm ~/Multitool
+echo "Chmodding files..."
+chmod +x ~/Multitool/*.sh
+chmod +x ~/Multitool/EMUI/*.sh
+chmod +x ~/Multitool/EMUI/Tweaker/*.sh
 echo "Removing junk files..."
 rm -rf ../HWMultitool-master
 echo "Multitool installed in your home folder! (You can change directory, just move folder ^^)"
