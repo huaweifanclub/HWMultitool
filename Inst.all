@@ -6,5 +6,6 @@ chmod +x ~/Multitool/*.sh
 chmod +x ~/Multitool/EMUI/*.sh
 chmod +x ~/Multitool/EMUI/Tweaker/*.sh
 echo "Removing junk files..."
-rm -rf ../HWMultitool-master
+rm -rf ../Multitool-master
+rm -rf ../Multitool-Rolling
 echo "Multitool installed in your home folder! (You can change directory, just move folder ^^)"
