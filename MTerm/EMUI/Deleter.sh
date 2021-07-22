@@ -3,7 +3,7 @@
 clear
 echo "Welcome to Multitool deleter!"
 PS3='Please, select app: '
-options=("AI Search" "AliExpress" "AppGallery" "Android Assebility Suite (Talkback)" "Backup" "Chrome, default browser" "Cloud" "Digidal balance" "Google Search" "Google Docs" "Google Drive" "Google Duo" "Microsoft Edge" "Microsoft Excel" "HUAWEI Files (Installing zArchiver)" "Google GMail" "Google Play Games" "Google Play Movies & TV" "Google Play Music" "Google Play with Backup Transport and dependencies (Installing F-Droid)" "Google Text-to-speech Engine" "HMS Core" "HUAWEI Services Framework" "HUAWEI Home (Installing Trebuchet)" "HUAWEI Music (Installing Retro Music)" "HUAWEI Video" "Instagram" "VK" "Yandex Apps" "Google Maps" "HUAWEI Member Center" "Microsoft Office Hub" "Microsoft OneDrive" "HUAWEI Party Mode" "Google Photos" "Google Sheets" "Google Slides" "Microsoft PowerPoint" "Sim Toolkit (Stk)" "Easter Egg" "Pinterest" "TikTok" "EMUI Update" "HUAWEI Support" "Google Translate" "HUAWEI Weather" "Microsoft Word" "Microsoft Launcher" "Microsoft Teams" "Microsoft SwiftKey (Installing OpenBoard)" "YouTube (Installing MicroG)" "SberBank" "Xiaomi Tools & Services" "Joom" "Facebook" "Exit")
+options=("AI Search" "AliExpress" "AppGallery" "Android Assebility Suite (Talkback)" "Backup" "Chrome, Meizu browser, default browser (Installing Bromite)" "Cloud" "Digidal balance" "Google Search" "Google Docs" "Google Drive" "Google Duo" "Microsoft Edge" "Microsoft Excel" "HUAWEI Files (Installing zArchiver)" "Google GMail" "Google Play Games" "Google Play Movies & TV" "Google Play Music" "Google Play with Backup Transport and dependencies (Installing F-Droid)" "Google Text-to-speech Engine" "HMS Core" "HUAWEI Services Framework" "HUAWEI Home (Installing Trebuchet)" "HUAWEI Music (Installing Retro Music)" "HUAWEI Video" "Instagram" "VK" "Yandex Apps" "Google Maps" "HUAWEI Member Center" "Microsoft Office Hub" "Microsoft OneDrive" "HUAWEI Party Mode" "Google Photos" "Google Sheets" "Google Slides" "Microsoft PowerPoint" "Sim Toolkit (Stk)" "Easter Egg" "Pinterest" "TikTok" "EMUI Update" "HUAWEI Support" "Google Translate" "HUAWEI Weather" "Microsoft Word" "Microsoft Launcher" "Microsoft Teams" "Microsoft SwiftKey (Installing OpenBoard)" "YouTube (Installing MicroG)" "SberBank" "Xiaomi Tools & Services" "Joom" "Facebook" "Meizu OneMind (Strongly recommend to remove this app!)" "Meizu App Store" "Meizu Search" "Migratool" "Flyme Launcher (Installing trebuchet)" "Meizu Update" "Pico TTS" "Meizu Account" "Meizu Cloud Services" "Exit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -22,7 +22,7 @@ do
 	"Backup")
 	adb shell pm uninstall -k --user 0 com.huawei.KoBackup
 	;;
-	"Chrome, default browser")
+	"Chrome, Meizu browser, default browser (Installing Bromite)")
 	adb shell pm uninstall -k --user 0 com.android.chrome
 	adb shell pm uninstall -k --user 0 com.android.browser
 	;;
@@ -146,7 +146,7 @@ do
 	"Pinterest")
 	adb shell pm uninstall -k --user 0 com.pinterest
 	;;
-	"TikTok"
+	"TikTok")
 	adb shell pm uninstall -k --user 0 com.zhiliaoapp.musically
 	;;
 	"EMUI Update")
@@ -235,6 +235,34 @@ do
 	adb shell pm uninstall --user 0 com.facebook.appmanager
 	adb shell pm uninstall --user 0 com.facebook.services
 	adb shell pm uninstall --user 0 com.facebook.system
+	;;
+	"Meizu OneMind (Strongly recommend to remove this app!)")
+	adb shell pm uninstall --user 0 com.meizu.alphame
+	;;
+	"Meizu App Store")
+	adb shell pm uninstall --user 0 com.xrom.intl.appcenter
+	;;
+	"Meizu Search")
+	adb shell pm uninstall --user 0 com.meizu.net.search
+	;;
+	"Migratool")
+	adb shell pm uninstall --user 0 com.meizu.datamigration
+	;;
+	"Flyme Launcher (Installing trebuchet)")
+	adb shell pm uninstall --user 0 com.meizu.flyme.launcher
+	adb install Apps/Trebuchet.apk
+	;;
+	"Meizu Update")
+	adb shell pm uninstall --user 0 com.meizu.flyme.update
+	;;
+	"Pico TTS")
+	adb shell pm uninstall --user 0 com.svox.pico
+	;;
+	"Meizu Account")
+	adb shell pm uninstall --user 0 com.meizu.account
+	;;
+	"Meizu Cloud Services")
+	adb shell pm uninstall --user 0 com.meizu.cloud
 	;;
 	"Exit")
             break
